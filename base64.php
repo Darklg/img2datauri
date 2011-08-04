@@ -1,5 +1,6 @@
 <?php
-$content_dir = dirname(__FILE__.'/upload/');
+$content_dir = dirname(__FILE__).'/upload/';
+include dirname(__FILE__).'/inc/upload.php';
 ?>
 <!doctype html>
 <html lang="fr">
