@@ -1,7 +1,11 @@
 <?php
 
-// Basé sur http://phpcodeur.net/articles/php/upload
+if (!is_dir($content_dir)) {
+    @mkdir($content_dir, 0777);
+    chmod($content_dir, 0777);
+}
 
+// Basé sur http://phpcodeur.net/articles/php/upload
 $tmp_file = $_FILES['fichier']['tmp_name'];
 if (!is_uploaded_file($tmp_file))
     $erreurs[] = "Le fichier est introuvable";

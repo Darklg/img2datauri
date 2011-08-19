@@ -1,5 +1,5 @@
 <?php
-
+$retour = '';
 if (isset($_POST['upload'])) {
     // Variables  par défaut
     $base_64_file = '';
