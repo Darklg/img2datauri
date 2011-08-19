@@ -1,6 +1,5 @@
 <?php
 
-
 if (empty($erreurs)) {
     $data_uri = 'data:' . $type_file . ';base64,' . $base_64_file;
     $retour = '<pre>' . $selecteur . ' {' . "\n";

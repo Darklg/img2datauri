@@ -1,7 +1,4 @@
 <?php
-$poids_maximal_img = 50 * 1024;
-$content_dir = dirname(__FILE__) . '/upload/';
-
 include dirname(__FILE__) . '/inc/config.php';
 include dirname(__FILE__) . '/inc/traitement.php';
 ?>

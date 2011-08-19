@@ -1,4 +1,5 @@
 <?php
+
 $retour = '';
 if (isset($_POST['upload'])) {
     // Variables  par défaut
@@ -22,5 +23,4 @@ if (isset($_POST['upload'])) {
         $erreurs[] = 'Aucun fichier valide transmis';
 
     include dirname(__FILE__) . '/traitement/resultat.php';
-
 }
