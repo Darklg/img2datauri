@@ -1,11 +1,18 @@
 <?php
 
+$compat_ie = (isset($_POST['active_ie']) && ctype_digit($_POST['active_ie'])) ? $_POST['active_ie'] : 0;
+
+
 if (empty($erreurs)) {
     $data_uri = 'data:' . $type_file . ';base64,' . $base_64_file;
     $retour = '<pre>' . $selecteur . ' {' . "\n";
     $retour .= "\t" . 'background-image:url(' . $data_uri . ');' . "\n";
+	if ($compat_ie == '1') {
+	    $retour .= "\t" . '*background-image:url(' . $name_file . ');' . "\n";
+    
+	}
     $retour .= '}' . "\n";
-    if (isset($_POST['active_ie'])) {
+    if ($compat_ie == '2') {
         $retour .= $selecteur_ie . ' {' . "\n";
         $retour .= "\t" . 'background-image:url(' . $name_file . ');' . "\n";
         $retour .= '}';

@@ -17,16 +17,22 @@ include dirname(__FILE__) . '/inc/traitement.php';
                 <label>
                     Selecteur :
                     <input type="text" name="selecteur" size="30" value=".maclass" />
-                </label><br />
+                </label>
+				<hr class="clear" />
                 <input type="file" name="fichier" size="30" /><br />
                 <label>
                     URL :
                     <input type="text" name="url" value="" id="url">
-                </label> <br />
-                <label>
-                    <input type="checkbox" name="active_ie" checked="checked" />
-                    Compatibilité IE
-                </label><br />
+                </label>
+				<hr class="clear" />
+				<label>Compatibilité IE</label>
+                <ul>
+				    <li><label><input type="radio" value="0" name="active_ie" /> Non </label></li>
+				    <li><label><input type="radio" value="1" name="active_ie" checked="checked" /> Oui (sale) </label></li>
+				    <li><label><input type="radio" value="2" name="active_ie" /> Oui (propre) </label></li>
+				</ul>
+                    
+                </label>
                 <input type="submit" name="upload" value="Uploader" />
             </div>
         </form>
