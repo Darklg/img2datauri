@@ -18,6 +18,7 @@ if (empty($erreurs) && !in_array($type_file, $types_img))
 $name_file = strip_tags($_FILES['fichier']['name']);
 if (empty($erreurs)) {
     $base_64_file = base64_encode(file_get_contents($tmp_file));
+    $poids_file = strlen(file_get_contents($tmp_file));
     $name_file = '../images/' . $name_file;
 }
 

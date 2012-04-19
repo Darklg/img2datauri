@@ -18,6 +18,11 @@ if (empty($erreurs)) {
         $retour .= '}';
     }
     $retour .= '</pre>';
+    $retour .= '<div style="margin-bottom:10px;">';
+	$retour .= '<small>datauri : '.strlen($data_uri).' chars</small><br />';
+	$retour .= '<small>img : '.$poids_file.' o</small><br />';
+	$retour .= '</div>';
+
     $retour .= '<div style="width:64px;height:64px;background:#cccccc url(' . $data_uri . ') no-repeat center center;border:1px solid #ccc;"></div>';
 } else {
     foreach ($erreurs as &$erreur)

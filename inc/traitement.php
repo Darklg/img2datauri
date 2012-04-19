@@ -6,6 +6,7 @@ if (isset($_POST['upload'])) {
     $base_64_file = '';
     $type_file = '';
     $name_file = '';
+    $poids_file = 0;
     $retour_ok = true;
     $erreurs = array();
 

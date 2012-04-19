@@ -21,6 +21,7 @@ if (!empty($url_details['path']) && strstr($url_details['path'], '.')) {
             $erreurs[] = 'Aucun fichier n\'a pu être récupéré.';
         else {
             $type_file = $types_img[$ext];
+			$poids_file = strlen($result);
             $name_file = $url;
             $base_64_file = base64_encode($result);
         }
