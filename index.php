@@ -36,6 +36,7 @@ include dirname(__FILE__) . '/inc/traitement.php';
                 <input type="submit" name="upload" value="Uploader" />
             </div>
         </form>
+        <a href="https://github.com/Darklg/img2datauri" target="_blank" style="position:fixed;top:0;right:0;"><img src="img/fork-me.png" width="149" height="149" alt="Fork Me" /></a>
     </body>
 </html>
 
