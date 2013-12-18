@@ -1,10 +1,10 @@
 <?php
 
 // Poids maximal d'un fichier uploadé
-$poids_maximal_img = 50 * 1024;
+$poids_maximal_img = 100 * 1024;
 
 // Nom de l'appli
-define('IMG2_NAME', 'IMG.2.DATA:URI');
+define('IMG2_NAME', 'IMG 2 Data URI - Convertir une image vers un data-uri');
 
 // Préfixe CSS pour IE
 define('IMG2_IE_PREFIX', '.lt_ie8');

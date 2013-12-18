@@ -1,19 +1,78 @@
+@charset "UTF-8";
+
 html {
-	text-align:center;
+    text-align: center;
 }
 
 body {
-	text-align:left;
-	width:600px;
-	margin:0 auto;
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
 }
 
 h1 {
-	font-size:18px;
+    font-family: sans-serif;
+    font-size: 18px;
 }
 
 pre {
-	max-width:100%;
-	overflow:auto;
-	font-size:12px;
+    max-width: 100%;
+    overflow: auto;
+    font-size: 12px;
+    outline: 1px solid #f0f0f0;
+}
+
+/* ----------------------------------------------------------
+  Forms
+---------------------------------------------------------- */
+
+fieldset {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#display-fieldset-options {
+    float: right;
+    font-size: 11px;
+    color: #999;
+}
+
+/* ----------------------------------------------------------
+  Grid
+---------------------------------------------------------- */
+
+.grid {
+    overflow: hidden;
+}
+
+.grid .col {
+    float: left;
+    width: 50%;
+}
+
+/* ----------------------------------------------------------
+  Demo
+---------------------------------------------------------- */
+
+.demo {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.demo p {
+    margin: 0 0 5px;
+}
+
+.demo-img,
+.demo-content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.demo-img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    background: #cccccc no-repeat center center;
 }
