@@ -6,14 +6,15 @@ $compat_ie = ( isset( $_POST['active_ie'] ) && ctype_digit( $_POST['active_ie'] 
 if ( empty( $erreurs ) ) {
     $data_uri = 'data:' . $type_file . ';base64,' . $base_64_file;
     $retour = '<pre>' . $selecteur . ' {' . "\n";
-    $retour .= "\t" . 'background-image:url(' . $data_uri . ');' . "\n";
+    $retour .= "\t" . 'background-image: url(' . $data_uri . ');' . "\n";
     $retour .= '}' . "\n";
     if ( $compat_ie != '0' ) {
         $retour .= $selecteur_ie . ' {' . "\n";
-        $retour .= "\t" . 'background-image:url(' . $name_file . ');' . "\n";
+        $retour .= "\t" . 'background-image: url(' . $name_file . ');' . "\n";
         $retour .= '}';
     }
     $retour .= '</pre>';
+    $retour .= '<textarea id="rawbase64" rows="1" cols="70">'.$data_uri.'</textarea>';
 
 
     $retour .= '<div class="demo">';

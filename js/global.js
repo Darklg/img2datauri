@@ -5,11 +5,28 @@
 window.domReady(function() {
     checkForm();
     setOptions();
+    uxEffects();
 });
+
+/* ----------------------------------------------------------
+  UX Effects
+---------------------------------------------------------- */
+
+var uxEffects = function() {
+    var rawbase64 = $_('rawbase64');
+    if (!rawbase64) {
+        return;
+    }
+    rawbase64.onclick = function() {
+        this.focus();
+        this.select();
+    };
+};
 
 /* ----------------------------------------------------------
   Form
 ---------------------------------------------------------- */
+
 var checkForm = function() {
     var form = $_('img2-form'),
         file = $_('img2-file'),
@@ -17,8 +34,8 @@ var checkForm = function() {
     if (!form || !file || !url) {
         return;
     }
-    form.onsubmit = function(e){
-        if(!file.value && !url.value) {
+    form.onsubmit = function(e) {
+        if (!file.value && !url.value) {
             e.preventDefault();
         }
     };

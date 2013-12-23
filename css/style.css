@@ -37,6 +37,25 @@ fieldset {
     color: #999;
 }
 
+textarea {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    min-height: 20px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    line-height: 20px;
+    white-space: nowrap;
+    color: #999;
+    resize: none;
+}
+
+textarea:focus {
+    color: #333;
+}
+
 /* ----------------------------------------------------------
   Grid
 ---------------------------------------------------------- */
@@ -75,4 +94,6 @@ fieldset {
     margin-right: 10px;
     border: 1px solid #ccc;
     background: #cccccc no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
 }
