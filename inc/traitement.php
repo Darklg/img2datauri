@@ -4,6 +4,7 @@ $retour = '';
 if (isset($_POST['upload'])) {
     // Variables  par défaut
     $base_64_file = '';
+    $base_64_file_raw = '';
     $type_file = '';
     $name_file = '';
     $poids_file = 0;

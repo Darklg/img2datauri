@@ -2,8 +2,14 @@
 
 $compat_ie = ( isset( $_POST['active_ie'] ) && ctype_digit( $_POST['active_ie'] ) ) ? $_POST['active_ie'] : 0;
 
-
 if ( empty( $erreurs ) ) {
+
+    if($type_file == 'image/svg+xml'){
+        $base_64_file_raw = str_replace(array('onload','onLoad'),'data-onload',$base_64_file_raw);
+        $base_64_file_raw = str_replace(array('<script','</script>'),array('<test','</test>'),$base_64_file_raw);
+    }
+    $base_64_file = base64_encode($base_64_file_raw);
+
     $data_uri = 'data:' . $type_file . ';base64,' . $base_64_file;
     $retour = '<pre>' . $selecteur . ' {' . "\n";
     $retour .= "\t" . 'background-image: url(' . $data_uri . ');' . "\n";
@@ -30,7 +36,5 @@ if ( empty( $erreurs ) ) {
     $retour .= '</div>';
 
 } else {
-    foreach ( $erreurs as &$erreur )
-        $erreur = '<li>' . $erreur . '</li>';
-    $retour = '<p>Aie aie aie !</p><ul>' . implode( '', $erreurs ) . '</ul>';
+    $retour = '<p>Aie aie aie !</p><ul><li>' . implode( '</li><li>', $erreurs ) . '</li></ul>';
 }

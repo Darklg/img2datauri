@@ -37,8 +37,8 @@ include dirname(__FILE__) . '/inc/traitement.php';
                         <div class="col">
                             <label>Compatibilité IE</label><br />
                             <ul>
-                                <li><label><input type="radio" value="0" name="active_ie" />Non</label></li>
-                                <li><label><input type="radio" value="2" name="active_ie" checked="checked" />Oui</label></li>
+                                <li><label><input type="radio" value="0" name="active_ie" checked="checked" />Non</label></li>
+                                <li><label><input type="radio" value="2" name="active_ie" />Oui</label></li>
                             </ul>
                         </div>
                     </div>

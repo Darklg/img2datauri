@@ -23,7 +23,7 @@ if (!empty($url_details['path']) && strstr($url_details['path'], '.')) {
             $type_file = $types_img[$ext];
 			$poids_file = strlen($result);
             $name_file = $url;
-            $base_64_file = base64_encode($result);
+            $base_64_file_raw = $result;
         }
     } else
         $erreurs[] = 'Le fichier n\'a pas l\'air d\'être une image';

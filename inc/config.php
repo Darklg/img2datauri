@@ -12,6 +12,7 @@ define('IMG2_IE_PREFIX', '.lt_ie8');
 // Extensions & types acceptés
 $types_img = array(
     'png' => 'image/png',
+    'svg' => 'image/svg+xml',
     'jpg' => 'image/jpeg',
     'jpeg' => 'image/jpeg',
     'bmp' => 'image/bmp',
