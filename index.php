@@ -10,6 +10,8 @@ include dirname(__FILE__) . '/inc/traitement.php';
         <link rel="stylesheet" href="css/style.css" type="text/css" />
     </head>
     <body>
+        <div class="img-form-wrap"><img src="img/download-cloud.svg" width="48" height="48" alt="" /></div>
+        <div class="main-container">
         <h1><?php echo IMG2_NAME; ?></h1>
         <?php echo $retour; ?>
         <form method="post" enctype="multipart/form-data" action="" id="img2-form">
@@ -48,8 +50,9 @@ include dirname(__FILE__) . '/inc/traitement.php';
             </div>
         </form>
         <a href="https://github.com/Darklg/img2datauri" target="_blank" style="position:fixed;top:0;right:0;"><img src="img/fork-me.png" width="149" height="149" alt="Fork Me" /></a>
-    <script src="js/utilities.js"></script>
-    <script src="js/global.js"></script>
+        </div>
+        <script src="js/utilities.js"></script>
+        <script src="js/global.js"></script>
     </body>
 </html>
 

@@ -3,10 +3,37 @@
 ---------------------------------------------------------- */
 
 window.domReady(function() {
+    setDragNDrop();
     checkForm();
     setOptions();
     uxEffects();
 });
+
+/* ----------------------------------------------------------
+  Dragndrop form
+---------------------------------------------------------- */
+
+function setDragNDrop() {
+    var timeoutDrop;
+
+    document.body.addEventListener('drop', function(e) {
+        setTimeout(function() {
+            $_('img2-form').submit();
+        }, 100);
+    });
+
+    document.body.addEventListener('dragover', function(e) {
+        $_('img2-file').style.left = (e.clientX - 10) + 'px';
+        $_('img2-file').style.top = (e.clientY - 10) + 'px';
+        document.body.setAttribute('data-dragging', 1);
+        clearTimeout(timeoutDrop);
+        timeoutDrop = setTimeout(setTimeoutDrop, 100);
+    }, 1);
+
+    function setTimeoutDrop() {
+        document.body.setAttribute('data-dragging', 0);
+    }
+}
 
 /* ----------------------------------------------------------
   UX Effects

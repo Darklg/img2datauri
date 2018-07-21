@@ -25,7 +25,7 @@ if ( empty( $erreurs ) ) {
 
     $retour .= '<div class="demo">';
 
-    $retour .= '<div class="demo-img" style="background-image: url(' . $data_uri . ');"></div>';
+    $retour .= '<div class="demo-img-wrapper"><div class="demo-img" style="background-image: url(' . $data_uri . ');"></div></div>';
 
     $retour .= '<div class="demo-content">';
     $retour .= '<p><strong>Stats</strong></p>';
@@ -34,6 +34,11 @@ if ( empty( $erreurs ) ) {
     $retour .= '</div>';
 
     $retour .= '</div>';
+    $retour .= <<<EOT
+<script>setTimeout(function(){
+    document.getElementById('rawbase64').select();
+},100);</script>
+EOT;
 
 } else {
     $retour = '<p>Aie aie aie !</p><ul><li>' . implode( '</li><li>', $erreurs ) . '</li></ul>';

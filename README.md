@@ -13,3 +13,10 @@ Installation
 * Télécharger la source
 * Dézipper dans un directory accessible par PHP/Apache
 * Enjoy
+
+
+License
+---
+
+This project is licensed under the MIT License.
+This project uses Feather icons : https://feathericons.com.

@@ -1,7 +1,7 @@
 <?php
 
 $retour = '';
-if (isset($_POST['upload'])) {
+if (!empty($_POST) && !empty($_FILES)) {
     // Variables  par défaut
     $base_64_file = '';
     $base_64_file_raw = '';
